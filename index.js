@@ -13,6 +13,9 @@ const path = require("path");
 // Import all routes
 const AuthRoute = require("./routes/auth");
 const ResultsRoute = require("./routes/results");
+const ConversationsRoute = require("./routes/conversations");
+const MessagesRoute = require("./routes/messages");
+const StaffRoute = require("./routes/staff");
 
 // MongoDB connection
 mongoose
@@ -34,6 +37,9 @@ app.use(morgan("common"));
 
 app.use("/api/auth", AuthRoute);
 app.use("/api/results", ResultsRoute);
+app.use("/api/conversations", ConversationsRoute);
+app.use("/api/messages", MessagesRoute);
+app.use("/api/staff", StaffRoute);
 
 // Start the backend server
 const PORT = process.env.PORT || 8800;
