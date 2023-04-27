@@ -23,7 +23,6 @@ const StaffModel = new mongoose.Schema(
     },
     profileimage: {
       type: String,
-      // required: true,
     },
   },
   { timestamps: true }

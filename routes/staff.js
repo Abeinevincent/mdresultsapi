@@ -15,7 +15,7 @@ router.post("/registerstaff", async (req, res) => {
     lastname,
     profileimage: req.body.profileimage,
   };
-
+  
   const user = await Staff.findOne({ email: req.body.email });
   if (user) {
     return res.status(500).json({
